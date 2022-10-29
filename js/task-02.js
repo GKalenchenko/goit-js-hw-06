@@ -1,7 +1,12 @@
 const ingredients = ['Potatoes', 'Mushrooms', 'Garlic', 'Tomatos', 'Herbs', 'Condiments'];
+// ---------------------------------------------------------------- //
+const findUl = document.querySelector(`#ingredients`);
 
-const Potatoes = document.createElement(`li`);
-Potatoes.textContent = `Potatoes`;
+const ingredientArray = [];
 
-const Mushrooms = document.createElement(`li`);
-Mushrooms.textContent = `Mushrooms`;
+for (let ingredient of ingredients) {
+  const createEl = document.createElement(`li`);
+  createEl.textContent = ingredient;
+  ingredientArray.push(createEl);
+}
+findUl.append(...ingredientArray);
