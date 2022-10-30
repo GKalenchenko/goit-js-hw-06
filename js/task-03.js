@@ -17,12 +17,10 @@ const images = [
 
 const ulRef = document.querySelector(`.gallery`);
 
-const markup = images.map(
-  image => `<li><img src="${image.url}", alt="${image.alt}", width= 500px;></img></li>`
-);
+const markup = images
+  .map(image => `<li><img src="${image.url}", alt="${image.alt}", width= 500px;></img></li>`)
+  .join('');
 
 ulRef.insertAdjacentHTML('beforeend', markup);
 
-ulRef.classList.add(flex);
-
-// Добавь с помощью classList флекс-класс на ul, а так же убери запятую в галерее ( предположительно с помощью join (" "))
+ulRef.classList.add('flex');
